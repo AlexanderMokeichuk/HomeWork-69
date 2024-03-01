@@ -27,6 +27,7 @@ const SearchTvShows = () => {
               name={"search"}
               value={nameTvShow}
               placeholder="Search"
+              autoComplete={"off"}
               required
 
               onChange={onChange}
