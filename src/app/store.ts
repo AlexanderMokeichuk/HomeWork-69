@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {tvShowsReducer} from "../store/shows/shows";
+import {autocompleteReducer} from "../store/autocompleteSlice";
+import {showReducer} from "../store/showSlice";
 
 export const store = configureStore({
   reducer: {
-    tvShows: tvShowsReducer,
+    autocomplete: autocompleteReducer,
+    show: showReducer,
   }
 });
 

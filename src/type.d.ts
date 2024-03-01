@@ -1,6 +1,4 @@
 export interface ApiShow {
-  score: number,
-  show: {
     averageRuntime: number,
     dvdCountry: null | {
       code: string,
@@ -56,10 +54,30 @@ export interface ApiShow {
         href: string,
       }
     },
-  }
+}
+export interface ApiShows{
+  score: number,
+  show: ApiShow,
+}
+
+export interface ShowInAutocomplete {
+  id: number,
+  name: string,
+}
+
+export interface NotFoundShow {
+  code: number,
+  message: string,
+  name: string,
+  status: number,
 }
 
 export interface Show {
-  id: number,
   name: string,
+  image: {
+    medium: string,
+    original: string,
+  }
+  summary: string;
+  url: string
 }
